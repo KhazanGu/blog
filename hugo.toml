@@ -1,0 +1,72 @@
+# 本地预览用这个即可。推到 GitHub 后，Actions 会按 Pages 地址覆盖 baseURL
+#（用户站 https://用户名.github.io/ ，项目站 https://用户名.github.io/仓库名/ ）。
+baseURL = "http://localhost:1313/"
+title = "技术笔记"
+theme = "PaperMod"
+locale = "zh-cn"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
+enableRobotsTXT = true
+enableEmoji = true
+summaryLength = 80
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup.highlight]
+  style = "github-dark"
+  lineNos = false
+  noClasses = false
+  tabWidth = 4
+
+[markup.goldmark.extensions.passthrough]
+  enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+  block = [["\\[", "\\]"], ["$$", "$$"]]
+  inline = [["\\(", "\\)"]]
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  TocOpen = false
+  math = true
+  hideFooter = false
+  hideMeta = false
+  disableThemeToggle = false
+  DateFormat = "2006-01-02"
+  description = "Markdown 技术笔记，发布到 GitHub Pages。"
+
+  [params.homeInfoParams]
+    Title = "技术笔记"
+    Content = "本地写 Markdown，推到 GitHub 后自动发布到 GitHub Pages。"
+
+  [params.assets]
+    disableHLJS = true
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 30
