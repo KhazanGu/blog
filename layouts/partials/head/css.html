@@ -1,0 +1,5 @@
+<link rel="stylesheet" href="{{ "css/pico.pumpkin.min.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+{{- if .Param "math" | default true -}}
+<link rel="stylesheet" href="{{ "katex/katex.min.css" | relURL }}">
+{{- end -}}

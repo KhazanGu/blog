@@ -1,0 +1,9 @@
+disabled = false
+locale = "zh-CN"
+label = "中文"
+weight = 1
+title = "技术笔记"
+
+[params]
+  dateFormat = "2006-01-02"
+  description = "Markdown 技术笔记，发布到 GitHub Pages。"
